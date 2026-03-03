@@ -1,91 +1,85 @@
-import 'dart:io';
-import 'dart:math';
-void main(List<String> arguments) {
-  print("Введите число");
-  double num1 = double.parse(stdin.readLineSync()!);
-  print("Введите еще число");
-  double num2 = double.parse(stdin.readLineSync()!);
-  print("Введи операцию");
-  String op = stdin.readLineSync()!;
-  
-
-  switch (op){
-  case "+": 
-  print({num1+num2});
-  break;
-   case "-": 
-  print({num1-num2});
-  break;
-   case "*": 
-  print({num1*num2});
-  break;
-  case "!=": 
-  print({num1!=num2});
-  break;
-  case "=": 
-  print({num1=num2});
-  break;
-  case ">": 
-  print({num1>num2});
-  break;
-  case "<": 
-  print({num1<num2});
-  break;
-  case ">=": 
-  print({num1>=num2});
-  break;
-  case "<=": 
-  print({num1<=num2});
-  break;
-  case "==":
-  print("Равно: ${num1==num2}");
-  break;
-      
-  case "/":
-  if (num1==0  num2==0){
-    print("нельзя делить на ноль");
-  }else {print({num1/num2}); break;}
-  break;
-
-  case "~/":
-  if (num1==0  num2==0){
-    print("нельзя делить на ноль");
-  }else {print({num1/num2}); break;}
-  break;
-
-  case "%":
-  if (num1==0  num2==0){
-    print("нельзя делить на ноль");
-  }else {print({num1/num2}); break;}
-  break;
-      
-  case "pow": 
-      print(pow(num1,num2));
-  break;
-      
-  case "&&":
-    print("Введи True|False");
-  bool num1 = bool.parse(stdin.readLineSync()!);
-  print("Введи True|False");
-  bool num2 = bool.parse(stdin.readLineSync()!);
-  print("Выводится: ${num1&&num2}"); 
-  break;
-  
-  case "":
-    print("Введи True|False");
-  bool num1 = bool.parse(stdin.readLineSync()!);
-  print("Введи True|False");
-  bool num2 = bool.parse(stdin.readLineSync()!);
-  print("Выводится: ${num1||num2}"); 
-  break;
-      
-  case "!":
-    print("Введи True|False");
-  bool num1 = bool.parse(stdin.readLineSync()!);
-  print("Введи True|False ");
-  bool num2 = bool.parse(stdin.readLineSync()!);
-  print("Выводится: ${!num1}"); 
-  break;
-  default: print("Неверный выбор");
+void main() {
+  print("1 задание:");
+  for (int i = 1; i < 6; i++) {
+    print(i);
   }
+  //--------------------------------------------------------------------------------------------
+  print("2 задание:");
+  var pl = 0;
+  for (int i = 1; i < 11; i++) {
+    pl += i;
+  }
+  //-------------------------------------------------------------------------------------------
+  print(pl);
+  print("3 задание:");
+  for (int i = 10; i > 0; i--) {
+    print(i);
+  }
+  //--------------------------------------------------------------------------------------------
+  print("4 задание:");
+  for (int i = 2; i < 21; i++) {
+    if (i % 2 == 0) {
+      print(i);
+    }
+  }
+  //-------------------------------------------------------------------------------------------
+  print("5 задание:");
+  var pl2 = 1;
+  while (pl2 < 100) {
+    pl2 *= 2;
+    print("меньше 100 ${pl2}");
+  }
+  print("больше 100 ${pl2}");
+  //------------------------------------------------------------------------------------------------
+  List<String> f = ["imya", "drugoe", "esheimya", "imyaa"];
+  for (var i in f) {
+    print("6 задание ${f}");
+  }
+  //---------------------------------------------------------------------------------------------
+  List<String> d = ["idmya", "drasfaugoe", "esfdf", "bebebe"];
+  for (var i in d) {
+    print("7 задание ${d} + длинна ${d.length}");
+  }
+  //--------------------------------------------------------------------------------------------------
+  print("8 задание: ");
+  List<String> goroda = ["parij", "germany", "russia", "gorod"];
+  for (var i in goroda) {
+    print("города: ${goroda.indexOf(i)}.${i}");
+  }
+  //---------------------------------------------------------------------------------------------------
+  print("9 задание:");
+  var pl3 = 0;
+  List<int> spis = [5, 10, 15, 20, 25];
+  for (var i in spis) {
+    pl3 += i;
+  }
+  print(pl3);
+  //------------------------------------------------------------------------------------------------------
+  print("10 задание");
+  var des = 0;
+  List<int> desz = [5, 10, 15, 20, 25];
+  for (var i in desz) {
+    if (i > des) {
+      des = i;
+    }
+  }
+  print(des);
+  //----------------------------------------------------------------------------------------------------
+  print("11 задание:");
+  List<int> spais = [1, 2, 3, 4, 5];
+  //print(spais.where((x)=> x%2==0)) мне кажется такое нельзя потому что у нас циклы;
+  for (var i in spais) {
+    if (i % 2 == 0) {
+      print(i);
+    }
+  }
+  //-----------------------------------------------------------------------------------------------------------
+  print("12 задание:");
+  List<int> temp = [15, 18, 20, 22, 19, 17, 16];
+  for (var i in temp) {
+    if (i < 18) {
+      print(i);
+    }
+  }
+  //------------------------------------------------------------------------------------------------------------
 }
